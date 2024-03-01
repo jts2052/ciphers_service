@@ -24,3 +24,8 @@ jobs:
         run: |
           cd ciphers_project
           python manage.py test
+      - name: Build and push the image
+        run: |
+          docker login --username jts2052 --password ${{secrets.ACCESS_TOKEN}} ghrc.io
+          docker build -t ghrc.io/jts2052/ciphers_project:latest --file Dockerfile .
+          docker push ghrc.io/jts2052/ciphers_project:latest
