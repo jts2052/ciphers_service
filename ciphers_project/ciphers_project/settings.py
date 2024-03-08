@@ -129,5 +129,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "https://jts2052.github.io",
     "http://localhost:3000",
+    "http://127.0.0.1:5500",
     "https://ciphers-project-jts2052.onrender.com"
 ]
